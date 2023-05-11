@@ -5,7 +5,7 @@ import os
 import csv
 
 #original join path did not work
-csvpath = "/Users/athiaqureshi/Desktop/git/python-challenge/PyBank/Resources/budget_data.csv"
+csvpath = "Resources/budget_data.csv"
 
 # lists to store data
 total_months = 0

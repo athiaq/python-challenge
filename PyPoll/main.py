@@ -1,7 +1,12 @@
+# import os module
 import os
+# import csv
 import csv
 
-csvpath = "/Users/athiaqureshi/Desktop/git/python-challenge/PyPoll/Resources/election_data.csv"
+#original join path did not work
+csvpath = os.path.join('Resources', 'election_data.csv')
+
+#/Users/athiaqureshi/Desktop/git/python-challenge/PyPoll/Resources/election_data.csv"
 
 #Defining variables and lists
 candidates_name = []
@@ -23,9 +28,11 @@ for candidate in candidates_name:
 #Calculating total votes
 total_votes = len(candidates_name)
 print(f'Total Votes: {total_votes}')
+
 # List of candidates that received votes, the percentage of votes each candidate won and the number of votes each candidate won
 for candidate, votes in candidate_votes.items():
     print(f'{candidate}: {round(votes/total_votes *100, 3)}% ({votes})')
+    
 # The winner of the election based on popular vote
 winner = max(set(candidates_name), key= candidates_name.count)
 print(f'Winner: {winner}')
